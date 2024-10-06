@@ -7,7 +7,7 @@ int main ()
     int vocales=0;
     char letra;
 
-    for (int i =0; i < 10; i++)
+    for (int i =0; i < 100; i++)
     {
         printf ("\n Ingrese un total de 100 letras num: %d : ",i);
         scanf ("%c",&letra);
