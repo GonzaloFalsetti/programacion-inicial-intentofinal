@@ -34,7 +34,7 @@ int main ()
 
     } while (caracter !='*');
     
-    printf ("\nla cantidad de letras introducidad son: %d \ny la cantidad de numeros son: %d \nla cantidad de simbolos son: %d ",cantidadletras,cantidadnum,contadorsimbolos);
+    printf ("\nla cantidad de letras introducidas son: %d \ny la cantidad de numeros son: %d \nla cantidad de simbolos son: %d ",cantidadletras,cantidadnum,contadorsimbolos);
 
 
 
