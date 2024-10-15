@@ -16,25 +16,22 @@ Nota: El IVA corresponde al 21% del total de ventas.
 
 int main ()
 {
-    int c=120 , e=10 , t=112 , valordecompra=0 , efectivoencaja=0 , totaltarjetadecredito=0 ,credito=0,cheque=0, totalefectivo=0, totalcheques=0 , totaldelaventa=0 , importeiva=0;
+    int c=120 , e=0.1 , t=112 , valordecompra=0 , efectivoencaja=0 , totaltarjetadecredito=0 ,credito=0,cheque=0, totalefectivo=0, totalcheques=0 , totaldelaventa=0 , importeiva=0;
     char tipodepago;
-
-    while (tipodepago != 'f')
-    {
-        printf ("\n ingrese el tipo de pago de la compra e,t,c: ");
+    
+    printf ("\n ingrese el tipo de pago de la compra e,t,c: ");
         fflush (stdin);
         scanf ("%c",&tipodepago);
-        if (tipodepago== 'f')
-        {
-            break;
-        }
+    while (tipodepago != 'f')
+    {
+        
         printf ("\n ingrese el valor de la compra: ");
         scanf ("%d",&valordecompra);
 
         if (tipodepago == 'e')
         {
-            efectivoencaja = (valordecompra * e)/100;
-            efectivoencaja += totalefectivo;
+            efectivoencaja = valordecompra - (valordecompra * 0.1);
+            totalefectivo += efectivoencaja;
         }
         if (tipodepago == 't')
         {
@@ -47,15 +44,15 @@ int main ()
             totalcheques += cheque;
         }
 
-        
-        
-        
-        
+        totaldelaventa = (totalcheques + totaltarjetadecredito + totalefectivo);
+        importeiva = (totaldelaventa * 0.21);
 
-
-
+        printf ("\n ingrese el tipo de pago de la compra e,t,c: ");
+        fflush (stdin);
+        scanf ("%c",&tipodepago);
 
     }
+    printf ("\nEfectivo en Caja: %d \nVentas con Tarjeta de Crédito: %d \nVentas con cheque: %d \nTotal de Venta: %d \nImporte del IVA: %d",totalefectivo,totaltarjetadecredito,totalcheques,totaldelaventa,importeiva);
     
 
 
