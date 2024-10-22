@@ -12,7 +12,7 @@ int main ()
     printf ("\ningrese el dia del mes: ");
     scanf ("%d",&dia);
     
-    while (dia >=31)
+    while (dia >31)
     {
         printf ("\ndato erroneo ingresado, intente nuevamente");
         printf ("\ningrese el dia del mes: ");
@@ -32,6 +32,6 @@ int main ()
     
 
 
-
+    return 0;
 
 }
