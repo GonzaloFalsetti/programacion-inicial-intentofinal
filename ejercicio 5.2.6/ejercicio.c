@@ -57,7 +57,6 @@ int main ()
     importepromediototal =importepromedio / i;
     
     printf ("\n el importe promedio es de %2.f ",importepromediototal);
-    printf ("\n el valor de i %d",i);
 
 
 

@@ -23,7 +23,7 @@ int main() {
             }
         }
 
-        if (esPrimo) {
+        if (esPrimo==0) {
             printf("%d ", numero);  // Imprimimos el número si es primo
             contador++;  // Incrementamos el contador de números primos encontrados
         }

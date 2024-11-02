@@ -15,7 +15,7 @@ b. Sueldo nuevo promedio de la empresa.*/
 int main ()
 {
     int sueldobasico=0,antiguedad=0,cantidaddehijos=0,i=0;
-    float nuevosueldo=0;
+    float nuevosueldo=0,sueldopromedio=0;
     char estudiossuperiores,masempleados='N';
 
 
@@ -69,7 +69,8 @@ int main ()
     }
     
 
-
+    sueldopromedio = sueldobasico / i;
+    printf ("\n el sueldo promedio de la empresa es de %2.f",sueldopromedio);
 
 
 
