@@ -18,7 +18,7 @@ rango utilizar la función EstaDentroDelRango realizada en el punto anterior.
 
 int main ()
 {
-
+    int pinga=0;
 
 
 
