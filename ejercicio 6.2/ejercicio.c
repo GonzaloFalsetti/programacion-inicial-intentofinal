@@ -51,7 +51,7 @@ int main ()
         numerovalidado = leeryvalidar (100,2000);
     }
     
-    printf ("\n La cantidad de numeros ingresados entre 100 y 500 es: %d \n La cantidad de numeros pares ingresados entre 500 y 1200 es de: %d \n El promedio de los numeros ingresados de 1200 a 2000 es de: %f",cantidadentre100y500,contadorpar500y1200,promedio);
+    printf ("\n La cantidad de numeros ingresados entre 100 y 500 es: %d \n La cantidad de numeros pares ingresados entre 500 y 1200 es de: %d \n El promedio de los numeros ingresados de 1200 a 2000 es de: %2.f",cantidadentre100y500,contadorpar500y1200,promedio);
 
     return 0;
 }
