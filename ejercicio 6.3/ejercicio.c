@@ -24,13 +24,42 @@ int puntaje (int,int,int,int,int);
 
 int main ()
 {
-    int cuadrante=0,participante=0;
+    int cuadrante=0,participante=0,cuad=0;
 
     printf ("\n ingrese el numero de participante: ");
     scanf ("%d",&participante);
 
-    while (participante > 0)
+
+    while (participante >= 0)
     {
+
+
+        cuad= cuadrante (cordx,cordy);
+
+        switch (cuad)
+        {
+            case 0:
+
+
+                break;
+
+            case 1:
+
+                break;
+            
+            case 2:
+
+                break;
+
+            case 3:
+
+                break;
+
+            case 4:
+
+                break;
+
+        }
         
     }
     
