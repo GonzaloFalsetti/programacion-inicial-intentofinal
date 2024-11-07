@@ -19,13 +19,37 @@ c. Calcular y mostrar la cantidad total de disparos en el centro (de todos los p
 #include <stdio.h>
 
 
+int cuadrante (int,int);
+int puntaje (int,int,int,int,int);
 
 int main ()
 {
+    int cuadrante=0,participante=0;
 
+    printf ("\n ingrese el numero de participante: ");
+    scanf ("%d",&participante);
+
+    while (participante > 0)
+    {
+        
+    }
+    
 
 
 
 
     return 0;
+}
+
+int cuadrante (int x, int y)
+{
+    int cuadrante=0;
+
+    return cuadrante;
+}
+
+int puntaje ()
+{
+
+
 }
