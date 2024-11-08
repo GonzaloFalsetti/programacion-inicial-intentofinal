@@ -19,50 +19,82 @@ c. Calcular y mostrar la cantidad total de disparos en el centro (de todos los p
 #include <stdio.h>
 
 
-int cuadrante (int,int);
+float cuadrante (float,float);
 int puntaje (int,int,int,int,int);
 
 int main ()
 {
-    int cuadrante=0,participante=0,cuad=0;
-
+    int punt=0,participante,cuad,i=0,disparocent=0,disparocuad1=0,disparocuad2=0,disparocuad3=0,disparocuad4=0;
+    float cordx,cordy;
     printf ("\n ingrese el numero de participante: ");
     scanf ("%d",&participante);
 
 
     while (participante >= 0)
     {
-
-
-        cuad= cuadrante (cordx,cordy);
-
-        switch (cuad)
+        for (i = 0; i < 5; i++)
         {
-            case 0:
+            printf (" \ningrese las cordenadas X del disparo %d: ",i);
+            scanf ("%f",&cordx);
+            printf (" \ningrese las cordenadas Y del disparo %d: ",i);
+            scanf ("%f",&cordy);
 
+            while ((cordx == 0 && (cordy >0 || cordy < 0))||(cordy == 0 && (cordx >0 || cordx < 0)))
+            {
+                printf ("\n CORDENADAS INCORRECTAS, INGRESE NUEVAMENTE");
+                printf (" \ningrese las cordenadas X del disparo %d: ",i);
+                scanf ("%f",&cordx);
+                printf (" \ningrese las cordenadas Y del disparo %d: ",i);
+                scanf ("%f",&cordy);
+                
+            }
+            
+            
+            cuad= cuadrante (cordx,cordy);
 
+           switch (cuad)
+          {
+             case 0:
+
+                disparocent++;
                 break;
 
-            case 1:
-
+             case 1:
+                disparocuad1++;
                 break;
             
-            case 2:
-
+             case 2:
+                disparocuad2++;
                 break;
 
-            case 3:
-
+             case 3:
+                disparocuad3++;
                 break;
 
-            case 4:
-
+             case 4:
+                disparocuad4++;
                 break;
 
+          }
+
+
+        
+        
         }
+
+            punt= puntaje (disparocent,disparocuad1,disparocuad2,disparocuad3,disparocuad4);
+            printf ("\n El puntaje total del participante %d es: %d",participante,punt);
+            printf ("\n Disparos del participante %d Al centro: %d cuadrante1: %d cuadrante2: %d cuadrante3: %d cuadrante4: %d",participante,disparocent,disparocuad1,disparocuad2,disparocuad3,disparocuad4);
+            printf ("\n ingrese el numero de participante: ");
+            scanf ("%d",&participante);
+            disparocent=0;
+            disparocuad1=0;
+            disparocuad2=0;
+            disparocuad3=0;
+            disparocuad4=0;
+        
         
     }
-    
 
 
 
@@ -70,15 +102,46 @@ int main ()
     return 0;
 }
 
-int cuadrante (int x, int y)
+float cuadrante (float x, float y)
 {
-    int cuadrante=0;
+    int cuadrante;
+    
+    if (x==0 && y==0)
+    {
+        cuadrante =0;
+    }
+    if (x>0 && y > 0)
+    {
+        cuadrante=1;
+    }
+    if (x<0 && y>0)
+    {
+        cuadrante =2;
+    }
+    if (x<0 && y< 0)
+    {
+        cuadrante =3;
+    }
+    if (x>0 && y<0)
+    {
+        cuadrante =4;
+    }
 
     return cuadrante;
 }
 
-int puntaje ()
-{
+int puntaje (int cent, int cuad1, int cuad2 , int cuad3 , int cuad4)
+{   
+    int puntajetotal=0;
 
+/*
+✓ Cuadrantes 1 y 2: 50 puntos
+✓ Cuadrantes 3 y 4: 40 puntos
+✓ Centro: 100 puntos
+*/
+puntajetotal= cent*100+((cuad1+cuad2)*50)+((cuad3+cuad4)*40);
 
+    
+
+    return puntajetotal;
 }
