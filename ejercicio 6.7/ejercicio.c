@@ -12,11 +12,6 @@ void mayormenor (int,int,int);
 int main ()
 {
     int numero=0,num1, num2, num3,contadorfinal=0,i=0;
-
-
-    
-
-
    
     
     while (contadorfinal <= 3 && (num1!= 96 && num1 != 97 && num1 !=98 && num2!= 96 && num2 != 97 && num2 !=98 && num3!= 96 && num3 != 97 && num3 !=98))
@@ -59,12 +54,6 @@ int main ()
         
     }
     
-
-
-    
-
-
-
 
     return 0;
 }
