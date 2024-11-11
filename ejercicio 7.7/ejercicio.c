@@ -33,7 +33,9 @@ int main ()
     char clasedearticulo[300];
     
     vectorespuntoa (codigoarticulo,clasedearticulo,numdeposito,stock,puntodereposicion);
-    vectorvb ();
+    vectorvb (codigoarticulo,stock,vb);
+    vectorvc (codigoarticulo,stock,puntodereposicion,vc);
+    vectorvd (codigoarticulo,numdeposito,vd);
 
 
     return 0;
@@ -105,4 +107,91 @@ void vectorespuntoa (int codigoarticulo [],char clasedearticulo[],int numdedepos
         }
         
     }
+}
+
+void vectorvb (int codigoarticulo[],int stock[],int vb[])
+{
+    int i=0,contadorexterno=0;
+    for (i = 0; i < 300; i++)
+    {
+        vb[i]=0;
+    }
+    
+
+    for (i = 0; i < 300; i++)
+    {
+        if (stock[i]==0)
+        {
+            vb[contadorexterno]= codigoarticulo[i];
+            contadorexterno++;
+        }
+        
+    }
+    printf ("\n Vector vb: ");
+    for (i = 0; i < 300; i++)
+    {
+        printf (" %d ",vb[i]);
+    }
+    
+}
+
+void vectorvc (int codigoarticulo[],int stock[],int puntodereposicion[],int vc[])
+{
+    int i=0,contadorexterno=0;
+    for (i = 0; i < 300; i++)
+    {
+        vc[i]=0;
+    }
+    
+
+    for (i = 0; i < 300; i++)
+    {
+        if (stock[i]< puntodereposicion[i])
+        {
+            vc[contadorexterno]= codigoarticulo[i];
+            contadorexterno++;
+        }
+        
+    }
+    printf ("\n Vector Vc: "); 
+    for (i = 0; i < 300; i++)
+    {
+        printf (" %d ",vc[i]);
+    }
+
+
+
+}
+
+void vectorvd (int codigoarticulo[],int numdeposito[],int vd[])
+{
+    /*Generar e informar el vector VD, que contengo los códigos de artículos de aquellos que están en los
+depósitos entre el 15 y 50.*/
+int i=0,contadorexterno=0;
+for ( i = 0; i < 300; i++)
+{
+    vd[i]=0;
+}
+
+for (i = 0; i < 300; i++)
+{
+    if (numdeposito[i]>=15 && numdeposito [i]<=50)
+    {
+        vd[contadorexterno]= codigoarticulo[i];
+        contadorexterno++;
+    }
+    
+}
+
+
+
+
+    printf ("\n Vector Vd: "); 
+    for (i = 0; i < 300; i++)
+    {
+        printf (" %d ",vd[i]);
+    }
+
+
+
 }
