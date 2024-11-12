@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 int cargarep (int[],int[]);
-int cargapedidos (int[]);
-int kilometros (int []);
+void cargapedidos (int[]);
+void kilometros (int []);
+void ventas ();
 int leeyvalida(int[],int,int[]);
 
 int main ()
