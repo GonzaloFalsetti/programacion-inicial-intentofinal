@@ -26,7 +26,7 @@ int main ()
 
     printf ("\n ingrese valores enteros entre -80 y 80 y finalice el ingreso ingresando 150: ");
     numverif=leeryvalidar (liminf,limsup,dif);
-    mayor= numverif;
+
     
     while (numverif!=150)
     {
@@ -39,7 +39,7 @@ int main ()
         else if (numpar==1)
         {
             cantpar++;
-            sumapares+= numverif
+            sumapares+= numverif;
         }
 
         
@@ -114,9 +114,15 @@ float promediopar (int cantpar, int sumapares)
 {
     float retorno=0;
 
-    retorno = sumapares/ cantpar;
 
-    if (cantpar<0)
+if (cantpar>0)
+{
+    retorno = sumapares/ cantpar;
+}
+
+    
+
+    if (cantpar<=0)
     {
         retorno=0;
     }
